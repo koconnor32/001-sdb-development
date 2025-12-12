@@ -348,6 +348,16 @@ body {
         <label>Drainage class           <!--controlled vocab-->
             <input name="drain_class" type="text">
         </label>
+
+        <label>Depth to subsurface water table (cm)
+            <input name="wt_dep" type="number">
+        </label>
+
+        <label>Hydric soil?
+            <input name="hydstat" type="checkbox" value="true">
+        </label>
+    </label>
+    </div>
         <div class="collapsible-section">
             <div class="collapsible-header" onclick="toggleSection(this)">
                 <span>Moisture status</span>
@@ -397,7 +407,6 @@ body {
                 </label>
             </div>
         </div>
-
     <div class="collapsible-section">
         <div class="collapsible-header" onclick="toggleSection(this)">
             <span>Surface water</span>
@@ -413,16 +422,7 @@ body {
             </label>
             </label>
         </div>
-    </div>
-
-        <label>Depth to subsurface water table (cm)
-            <input name="wt_dep" type="number">
-        </label>
-
-        <label>Hydric soil?
-            <input name="hydstat" type="checkbox" value="true">
-        </label>
-        </label>
+    </label>
     </div>
 </div>
 
@@ -975,6 +975,14 @@ function toggleSection(header) {
   content.classList.toggle('hidden');
   arrow.classList.toggle('collapsed');
 }
+
+// Start all collapsible sections closed
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.collapsible-content').forEach(content => {
+    content.classList.add('hidden');
+    content.previousElementSibling.querySelector('.collapsible-arrow').classList.add('collapsed');
+  });
+});
 
 </script>
 </body>
