@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>New Project</title>
+<title>RUSI Entry</title>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -79,107 +79,115 @@ body {
 
   <div id="statusMessage"></div>
 
+<!--references for creating boxes- good to copy/paste-->
+
+<!--STATIC BOX
+<div class="static-section">
+    <div class="static-header">
+        <span>NAME</span>
+    </div>
+    <div class="static-content">
+        FIELDS
+        </label>
+    </div>
+</div>
+-->
+
+<!-- COLLAPSABLE BOX
+<div class="collapsible-section">
+    <div class="collapsible-header" onclick="toggleSection(this)">
+        <span>NAME</span>
+        <span class="collapsible-arrow">▼</span>
+    </div>
+    <div class="collapsible-content">
+        FIELDS
+        </label>
+    </div>
+</div>
 
 <!--this is where the form actually begins-->
 
+
+<!--catagory: rusi entry identifiers-->
+
 <div class="static-section">
     <div class="static-header">
-        <span>Catagory: Project Identifiers</span>
+        <span>Catagory: RUSI Identifiers</span>
     </div>
     <div class="static-content">
-                <label>Lab project ID
-                <input name="lab_projiid" required>
+                <label>SDB project ID
+                <input name="lab_projiid_ref" required>
                 </label>
 
-                <label>Official SDB Project ID
-                <input name="sdb_projiid" required>
-                </label> 
+                <label>Lab pedon ID
+                <input name="lab_peiid_ref">
+               </label> 
+
+                <label>SDB pedon ID
+                <input name="lab_peiid_ref" required>
+                </label>
+
+                <label>SDB RUSI ID
+                <input name="sdb_rusiiid" required>
+                </label>
 
                 <!-- <label>Entry date -to be collected on backend- automatic hidden field
-                <input name="proj_entry_dts" required>
+                <input name="rusi_entry_dts" required>
                 </label> -->
     </div>
 </div>
 
 
-<!--catagory: basic project information-->
 
-<div class="collapsible-section">
-        <div class="collapsible-header" onclick="toggleSection(this)">
-                <span>Catagory: Basic Project Information</span>
-                <span class="collapsible-arrow">▼</span>
-        </div>
-        <div class="collapsible-content">
-                <label>Start date
-                        <input name="proj_start" type="date">
-                </label>
+<!--catagory: rusi catagories-->
 
-                <label>Project end date
-                        <input name="proj_end" type="date">
-                </label>
-
-                <!--<label>Legacy data? will need to add information at the end to transcribe to boolean- straightfoward
-                        <input name="legacy" type="" value="true" required>
-                </label>-->
-                
-                <label>Project description
-                        <input name="proj_description" type="text" required>
-                </label>
-        </div>
-</div>
-
-
-
-
-<!--catagory: grant information-->
-
-<div class="collapsible-section">
-    <div class="collapsible-header" onclick="toggleSection(this)">
-        <span>Catagory: Grant Information</span>
-        <span class="collapsible-arrow">▼</span>
+<div class="static-section">
+    <div class="static-header">
+        <span>Catagory: RUSI Values</span>
     </div>
-    <div class="collapsible-content">
-        <label>Grant agency
-                <input name="grant_agent" type="text">
+    <div class="static-content">
+        <label>Traffic score
+        <input name="rusi_tra" type="number" required>
         </label>
 
-        <label>Agency grant number
-                <input name="grant_agent_num" type="number">
+        <label>Infrastructure, building score
+        <input name="rusi_inf_building" type="number" required>
         </label>
 
-        <label>Grant agent number internal
-                <input name="grant_internal_num" type="number">
-        </label>
-        </label>
-    </div>
-</div>
-
-
-
-<!--catagory: personnel-->
-
-<div class="collapsible-section">
-    <div class="collapsible-header" onclick="toggleSection(this)">
-        <span>Catagory: Personnel</span>
-        <span class="collapsible-arrow">▼</span>
-    </div>
-    <div class="collapsible-content">
-        <label>PI personnel
-                <input name="personnel_pi" type="text">
+        <label>Infrastructure, impervious surface score
+        <input name="rusi_inf_imperv" type="number" required>
         </label>
 
-        <label>Grad student personnel
-                <input name="personnel_grad" type="text">
+        <label>Surface score
+        <input name="rusi_sur" type="number" required>
         </label>
 
-        <label>Other personnel
-                <input name="personnel_other" type="text">
+        <label>Texture score
+        <input name="rusi_tex" type="number" required>
         </label>
+
+        <label>Structure score
+        <input name="rusi_str" type="number" required>
         </label>
+
+        <label>Penetration score
+        <input name="rusi_pen" type="number" required>
+        </label>
+
+        <label>Depth of A horizon score
+        <input name="rusi_hor" required>
+        </label>
+
+        <label>Soil organic matter score
+        <input name="rusi_som" type="number" required>
+        </label>
+
+        <label>Overall score  <!--value = additon of all above value-->
+        <input name="rusi_val" type="number" required>
+        </label>
+
     </div>
 </div>
-
-
 
 
 <!--This is the save button at the end of the form, needs work-->
