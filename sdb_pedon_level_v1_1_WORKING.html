@@ -1,4 +1,4 @@
-<!--Current as of 09-DEC-2025-->
+<!--Current as of 12-DEC-2025-->
     
 <!--This section is for webpage styling-->
 
@@ -356,7 +356,6 @@ body {
         <label>Hydric soil?
             <input name="hydstat" type="checkbox" value="true">
         </label>
-    </label>
     </div>
         <div class="collapsible-section">
             <div class="collapsible-header" onclick="toggleSection(this)">
@@ -381,7 +380,6 @@ body {
                         <label>Mositure status 1 bottom depth (cm)
                             <input name="mst_depb_1" type="number">
                         </label>
-                        </label>
                     </div>
                 </div>
             <div class="collapsible-section">
@@ -401,10 +399,8 @@ body {
                     <label>Mositure status 2 bottom depth (cm)
                         <input name="mst_depb_2" type="number">
                     </label>
-                    </label>
                 </div>
             </div>
-                </label>
             </div>
         </div>
     <div class="collapsible-section">
@@ -420,14 +416,12 @@ body {
             <label>Surface water depth (cm)
                 <input name="surfh2o_dep" type="number">
             </label>
-            </label>
         </div>
-    </label>
     </div>
 </div>
 
 <!--catagory: parent material-->
-<div class="collapsible-section">
+div class="collapsible-section">
     <div class="collapsible-header" onclick="toggleSection(this)">
         <span>Catagory: Parent Material</span>
         <span class="collapsible-arrow">▼</span>
@@ -484,7 +478,6 @@ body {
                                 </label>
                             </div>
                         </div>
-
                         <div class="static-section">
                             <div class="static-header">
                                 <span>Parent Material 3</span>
@@ -574,7 +567,6 @@ body {
                 </label>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -947,7 +939,7 @@ document.getElementById('f').addEventListener('submit', async (e)=>{
     const responseText = await r.text();
     outEl.textContent = responseText;
     
-    // Try to parse and show prettier message
+    // Try to parse and show more communactive messages
     try {
       const json = JSON.parse(responseText);
       if (json.ok) {
