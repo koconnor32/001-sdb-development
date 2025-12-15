@@ -1,0 +1,227 @@
+<!--Current as of 10-DEC-2025-->
+    
+<!--This section is for webpage styling-->
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>RUSI Entry</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F7F2EE;
+  color: #312417;
+}
+
+/*collapsible section styling*/
+.collapsible-section {
+  border: 2px solid #d8cbb5;
+  border-radius: 6px;
+  margin: 15px 0;
+  padding: 0;
+  background-color: #fff;
+}
+.collapsible-header {
+  background-color: #f0e3cc;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  border-radius: 4px 4px 0 0;
+}
+.collapsible-header:hover {
+  background-color: #d8cbb5;
+}
+.collapsible-arrow {
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+.collapsible-arrow.collapsed {
+  transform: rotate(-90deg);
+}
+.collapsible-content {
+  padding: 15px;
+  display: grid;
+  gap: 10px;
+}
+.collapsible-content.hidden {
+  display: none;
+}
+
+/*static/box section styling*/
+.static-section {
+  border: 2px solid #d8cbb5;
+  border-radius: 6px;
+  margin: 15px 0;
+  padding: 0;
+  background-color: #fff;
+}
+.static-header {
+  background-color: #f0e3cc;
+  padding: 12px 15px;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+}
+.static-content {
+  padding: 15px;
+  display: grid;
+  gap: 10px;
+}
+</style>
+</head>
+<body>
+
+<form id="f" style="max-width:650px;margin:24px auto;display:grid;gap:10px">
+  <h1 style="text-align: center; font-size: 32px; margin-bottom: 15px;">SDB Project Entry Form</h1>
+
+  <div id="statusMessage"></div>
+
+<!--references for creating boxes- good to copy/paste-->
+
+<!--STATIC BOX
+<div class="static-section">
+    <div class="static-header">
+        <span>NAME</span>
+    </div>
+    <div class="static-content">
+        FIELDS
+        </label>
+    </div>
+</div>
+-->
+
+<!-- COLLAPSABLE BOX
+<div class="collapsible-section">
+    <div class="collapsible-header" onclick="toggleSection(this)">
+        <span>NAME</span>
+        <span class="collapsible-arrow">▼</span>
+    </div>
+    <div class="collapsible-content">
+        FIELDS
+        </label>
+    </div>
+</div>
+-->
+
+<!--this is where the form actually begins-->
+
+
+<!--catagory: Vegetation entry identifiers-->
+
+<div class="static-section">
+    <div class="static-header">
+        <span>Catagory: Vegetation Entry Identifiers</span>
+    </div>
+    <div class="static-content">
+                <label>SDB project ID
+                <input name="sdb_projiid_ref" required>
+                </label>
+
+                <label>Lab pedon ID
+                <input name="lab_peiid_ref">
+               </label> 
+
+                <label>SDB pedon ID
+                <input name="sdb_peiid_ref" required>
+                </label>
+
+                <label>Vegetation common name   <!--this or scientific name required-->
+                <input name="veg_comname">
+                </label>
+
+                <label>Vegetation scientific name
+                <input name="veg_sciname">
+                </label>
+
+                <label>SDB Vegeation Entry ID
+                <input name="sdb_vegiid" required>
+                </label>
+
+                <!-- <label>Entry date -to be collected on backend- automatic hidden field
+                <input name="rusi_entry_dts" required>
+                </label> -->
+    </div>
+</div>
+
+<!--catagory: DRAFT vegetation catagories... needs major work-->
+
+<label>Vegetation symbol
+        <input name="veg_sym" type="text">
+</label>
+
+<label>Vegetation cover (%)
+        <input name="veg(pct)" type="number">
+</label>
+
+<!--This is the save button at the end of the form, needs work-->
+ 
+  <button>Save</button>
+  <pre id="out"></pre>
+</form>
+<script>
+
+/* need to update this for project-specific information
+const API = "https://673mmzj2a6.execute-api.us-east-2.amazonaws.com/prod";
+document.getElementById('f').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const outEl = document.getElementById('out');
+  outEl.textContent = "Submitting...";
+  
+  const fd = new FormData(e.target), body={}; 
+  fd.forEach((v,k)=> body[k]=v||null);
+  
+  try {
+    const r = await fetch(API + "/pedons", { 
+      method:'POST', 
+      headers:{'content-type':'application/json'}, 
+      body: JSON.stringify(body) 
+    });
+    
+    const responseText = await r.text();
+    outEl.textContent = responseText;
+    
+    // Try to parse and show prettier message
+    try {
+      const json = JSON.parse(responseText);
+      if (json.ok) {
+        outEl.textContent = "✓ SUCCESS: Pedon saved! ID: " + json.sdb_peiid;
+        outEl.style.color = "green";
+      } else {
+        outEl.textContent = "✗ ERROR: " + json.error;
+        outEl.style.color = "red";
+      }
+    } catch (e) {
+      // If not JSON, just show the text
+      outEl.style.color = "black";
+    }
+  } catch (err) {
+    outEl.textContent = "✗ NETWORK ERROR: " + err.message;
+    outEl.style.color = "red";
+  }
+});
+
+*/
+
+// Function to toggle collapsible sections
+function toggleSection(header) {
+  const content = header.nextElementSibling;
+  const arrow = header.querySelector('.collapsible-arrow');
+  
+  content.classList.toggle('hidden');
+  arrow.classList.toggle('collapsed');
+}
+
+// Start all collapsible sections closed
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.collapsible-content').forEach(content => {
+    content.classList.add('hidden');
+    content.previousElementSibling.querySelector('.collapsible-arrow').classList.add('collapsed');
+  });
+});
+
+</script>
+</body>
+</html>
