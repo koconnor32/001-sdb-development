@@ -108,11 +108,70 @@ body {
 
 <!--Catagory: Artifact Identifying Information-->
 
-
+<div class="static-section">
+    <div class="static-header">
+        <span>NAME</span>
+    </div>
+    <div class="static-content">
+        FIELDS
+    </div>
+</div>
 
 <!--Catagory: Artifact Information-->
 
+<div class="static-section">
+    <div class="static-header">
+        <span>Catagory: Artifact Information</span>
+    </div>
+    <div class="static-content">
+        <label>Artifact estimate (%)
+          <input name="artif_pct" type="number">
+        </label>
 
+        <label>Artifact size (mm)
+          <input name="arif_sz" type="number">
+        </label>
+
+        <label>Artifact         <!--controlled vocabulary-->
+          <input name="artif_kind" type="text">
+        </label>
+
+        <label>Artifact roundness <!--controlled vocabulary-->
+          <input name="artif_rnd" type="text">
+        </label>
+
+        <label>Artifact shape     <!--controlled vocabulary-->
+          <input name="artif_shp" type="text">
+        </label>
+
+        <label>Artifact cohesion  <!--controlled vocabulary-->
+          <input name="artif_coh" type="text">
+        </label>
+
+        <label>Artifact penetrability <!--controlled vocabulary-->
+          <input name="artif_pen" type="text">
+        </label>
+        
+        <label>Artifact persistance <!--controlled vocabulary-->
+          <input name="artif_per" type="text">
+        </label>
+
+        <label>Artifact safety  <!--controlled vocabulary-->
+          <input name="artif_safe" type="text">
+        </label>        
+
+    </div>
+</div>
 
 <!--Catagory: Notes-->
 
+<div class="static-section">
+    <div class="static-header">
+        <span>Notes</span>
+    </div>
+    <div class="static-content">
+        <label>Artifact Notes
+          <input name="artif_note" type="text">
+        </label>
+    </div>
+</div>

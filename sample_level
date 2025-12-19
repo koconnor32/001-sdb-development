@@ -81,6 +81,14 @@ body {
 
 <!--references for creating boxes- good to copy/paste-->
 
+
+<!--FIELD
+<label>
+  <input name="" type="">
+</label>
+-->
+
+
 <!--STATIC BOX
 <div class="static-section">
     <div class="static-header">
@@ -106,38 +114,349 @@ body {
 
 <!--this is where the form actually begins-->
 
-<!--Catagory: Sample Identifying Informatiom-->
+<!--Catagory: Sample Identifying Information-->
 
+<div class="static-section">
+    <div class="static-header">
+        <span>Catagory: Sample Identifying Information</span>
+    </div>
+    <div class="static-content">
+        <label>SDB pedon ID
+          <input name="sdb_peiid_ref" type="text">
+        </label>
 
+        <label>SDB horizon ID
+          <input name="sdb_hziid_ref" type="text">
+        </label>
+
+        <label>Lab sample ID
+          <input name="lab_smiid" type="text">
+        </label>
+
+        <label>SDB sample ID
+          <input name="sdb_smiid" type="text">
+        </label>
+
+        <label>entry date
+          <input name="sm_entry_dts" type="dts">
+        </label>
+    </div>
+</div>
 
 <!--Catagory: Location-->
 
+<div class="static-section">
+    <div class="static-header">
+        <span>Catagory: Location</span>
+    </div>
+    <div class="static-content">
+        <label>Sample top depth (cm)
+          <input name="sdept" type="number">
+        </label>
 
+        <label>Sample bottom depth (cm)
+          <input name="sdepb" type="number">
+        </label>
+    </div>
+</div>
 
 <!--Catagory: Lab Texture-->
 
+  <!--LPSA-->
+<label>LPSA file exists?
+  <input name="labtx_lpsa_file" type="checkbox"> <!--EDIT TO CORRECT TO BOOLEAN-->
+</label>
 
+<label>LPSA VCOS (%)
+  <input name="labtx_lpsa_vcos" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>LPSA COS (%)
+  <input name="labtx_lpsa_cos" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>LPSA S (%)
+  <input name="labtx_lpsa_s" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>LPSA FS (%)
+  <input name="labtx_lpsa_fs" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>LPSA VFS (%)
+  <input name="labtx_lpsa_vfs" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>LPSA COSI (%)
+  <input name="labtx_lpsa_cosi" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>LPSA FSI (%)
+  <input name="labtx_lpsa_fsi" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>LPSA C (%)
+  <input name="labtx_lpsa_c" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>LPSA notes
+  <input name="labtx_lpsa_note" type="text"> 
+</label>
+  
+  <!--Hydrometer-->
+
+<label>Hydrometer performed?
+  <input name="tabtx_hydm_boolean" type="checkbox"> <!--EDIT TO CORRECT TO BOOLEAN-->
+</label>
+
+<label>Hydrometer S (%)
+  <input name="labtx_hydm_s" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Hydrometer C (%)
+  <input name="labtx_hydm_c" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Hydrometer SI (%)
+  <input name="labtx_hydm_si" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Texture by hydrometer notes
+  <input name="labtx_hydm_note" type="text">
+</label>
+
+  <!--Wet sieving-->
+
+<label>Wet sieving performed?
+  <input name="tabtx_wetsiv_boolean" type="checkbox"> <!--EDIT TO CORRECT TO BOOLEAN-->
+</label>
+
+<label>Wet sieving VCOS (%)
+  <input name="labtx_wetsiv_vcos" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Wet sieving COS (%)
+  <input name="labtx_wetsiv_cos" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Wet sieving S (%)
+  <input name="labtx_wetsiv_s" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Wet sieving FS (%)
+  <input name="labtx_wetsiv_fs" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Wet sieving VFS (%)
+  <input name="labtx_wetsiv_vfs" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Wet sieving notes
+  <input name="labtx_wetsiv_note" type="text">
+</label>
+
+  <!--Pipette-->
+
+<label>Pipetting performed?
+  <input name="tabtx_pip_boolean" type="checkbox"> <!--EDIT TO CORRECT TO BOOLEAN-->
+</label>
+
+<label>Coarse silt via pipette (%)
+  <input name="labtx_pip_cosi" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Fine silt via pipette (%)
+  <input name="labtx_pip_fsi" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Clay via pipette (%)
+  <input name="labtx_pip_c" type="number"> <!--bump in from sample_texture-->
+</label>
+
+<label>Texture by pipette notes
+  <input name="labtx_pip_note" type="text">
+</label>
 
 <!--Catagory: Bulk Density-->
 
+  <!--Ring Method-->
 
+<label>
+  <input name="" type="number">
+</label>
+
+<label>
+  <input name="" type="text">
+</label>
+
+  <!--Compliant Cavity Method-->
+
+<label>
+  <input name="" type="number">
+</label>
+
+<label>
+  <input name="" type="text">
+</label>
+
+  <!--Soil Core Method-->
+
+<label>
+  <input name="" type="number">
+</label>
+
+<label>
+  <input name="" type="text">
+</label>
 
 <!--Catagory: pH, EC, LOI-->
 
+  <!--pH-->
 
+<label>
+  <input name="" type="number">
+</label>
+
+<label>
+  <input name="" type="text">
+</label>
+
+  <!--Electrical Conductivity-->
+
+<label>
+  <input name="" type="number">
+</label>
+
+<label>
+  <input name="" type="text">
+</label>
+
+  <!--LOI-->
+
+<label>
+  <input name="" type="number">
+</label>
+
+<label>
+  <input name="" type="text">
+</label>
 
 <!--Catagory: MIR-->
 
+<label>
+  <input name="" type="">
+</label>
 
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
 
 <!--Catagory: Internal Elemental Analyses (PXRF, XRF, etc.)-->
 
+  <!--PXRF-->
 
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+  <!--XRF-->
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
 
 <!--Catagory: External Analyses-->
 
+  <!--MVTL-->
 
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+  <!--Agvise-->
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
 
 <!--Catagory: Lowland Conifer Specific-->
 
+<label>
+  <input name="" type="">
+</label>
 
+<label>
+  <input name="" type="">
+</label>
+
+<label>
+  <input name="" type="">
+</label>
