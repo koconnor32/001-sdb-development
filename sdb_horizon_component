@@ -81,6 +81,12 @@ body {
 
 <!--references for creating boxes- good to copy/paste-->
 
+<!--generic field
+<label>
+  <input name="" type="">
+</label>
+-->
+
 <!--STATIC BOX
 <div class="static-section">
     <div class="static-header">
@@ -108,26 +114,154 @@ body {
 
 <!--Catagory: Horizon Component Identifying Information-->
 
+<label>SDB horizon ID
+  <input name="sbd_hziid_ref" type="text" required>
+</label>
 
+<label>Horizon component name
+  <input name="hzcomp_name" type="text" required>
+</label>
+
+<label>Horizon component percent
+  <input name="hzcomp_pct" type="number" required>
+</label>
+
+<label>SBD horizon component ID
+  <input name="sdbhzcompiid" type="text" required>
+</label>
+
+<label>entry date
+  <input name="hzcomp_entry_dts" type="dts" required>
+</label>
 
 <!--Catagory: Matrix Color-->
 
-
+<label>Horizon component matrix color
+  <input name="hzcomp_col" type="text"> <!--controlled vocab-->
+</label>
 
 <!--Catagory: Texture and Von Post-->
 
+<label>Hz comp von post estimate  <!--controlled vocab-->
+  <input name="hzcomp_field_vpost" type="text">
+</label>
 
+<label>Hz comp fiber estimate (%)
+  <input name="hzcomp_field_fibrpct" type="number">
+</label>
+
+<label>Hz comp texture class  <!--controlled vocab-->
+  <input name="hzcomp_fieldtx_type" type="text">
+</label>
+
+<label>Hz comp texture modifier <!--controlled vocab-->
+  <input name="hzcomp_fieldtx_mod" type="text">
+</label>
+
+<label>Hz comp texture clay estimate (%)
+  <input name="hzcomp_fieldtx_c" type="number">
+</label>
+
+<label>Hz comp texture silt estimate (%)
+  <input name="hzcomp_fieldtx_s" type="number">
+</label>
+
+<label>Hz comp texture sand estimate (%)
+  <input name="hzcomp_fieldtx_si" type="number">
+</label>
 
 <!--Catagory: Coarse Fragments-->
 
+<label>Hz comp coarse fragment 1 estimate (%)
+  <input name="hzcomp_frag_pct_1" type="number">
+</label>
 
+<label>Hz comp coarse fragment 1 minimum size (cm)
+  <input name="hzcomp_frag_szrmin_1" type="number">
+</label>
+
+<label>Hz comp coarse fragment 1 maximum size (cm)
+  <input name="hzcomp_frag_szrmax_1" type="number">
+</label>
+
+<label>Hz comp coarse fragment 1 type
+  <input name="hzcomp_frag_type_1" type="text">
+</label>
+
+<label>Hz comp coarse fragment 1 roundness
+  <input name="hzcomp_frag_rnd_1" type="text">
+</label>
+
+<label>Hz comp coarse fragment 1 rock material
+  <input name="hzcomp_frag_kind_1" type="text">
+</label>
+
+<label>Hz comp coarse fragment 2 estimate (%)
+  <input name="hzcomp_frag_pct_2" type="number">
+</label>
+
+<label>Hz comp coarse fragment 2 minimum size (cm)
+  <input name="hzcomp_frag_szrmin_2" type="number">
+</label>
+
+<label>Hz comp coarse fragment 2 maximum size (cm)
+  <input name="hzcomp_frag_szrmax_2" type="number">
+</label>
+
+<label>Hz comp coarse fragment 2 type
+  <input name="hzcomp_frag_type_2" type="text">
+</label>
+
+<label>Hz comp coarse fragment 2 roundness
+  <input name="hzcomp_frag_rnd_2" type="text">
+</label>
+
+<label>Hz comp coarse fragment 2 rock material
+  <input name="hzcomp_frag_kind_2" type="text">
+</label>
 
 <!--Catagory: Structure-->
 
+<label>Hz comp structure type
+  <input name="hzcomp_strut_kind_1" type="text">
+</label>
 
+<label>Hz comp structure grade
+  <input name="hzcomp_srut_grad_1" type="number">
+</label>
+
+<label>Hz comp structure size
+  <input name="hzcomp_strut_sz_1" type="text">
+</label>
+
+<label>Hz comp parting structure type
+  <input name="hzcomp_strut_kind_2" type="text">
+</label>
+
+<label>Hz comp parting structure grade
+  <input name="hzcomp_srut_grad_2" type="number">
+</label>
+
+<label>Hz comp parting structure size
+  <input name="hzcomp_strut_sz_2" type="text">
+</label>
 
 <!--Catagory: Misc.-->
 
+<label>Hz comp moist consistence
+  <input name="hzcomp_moistcon" type="text">
+</label>
 
+<label>Hz comp effervescence
+  <input name="hzcomp_eff" type="text">
+</label>
+
+<label>Hz comp field pH
+  <input name="hzcomp_field_ph" type="number">
+</label>
 
 <!--Catagory: Notes-->
+
+<label>Hz comp-specific notes
+  <input name="hzcomp_note" type="text">
+</label>

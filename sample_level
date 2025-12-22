@@ -122,23 +122,23 @@ body {
     </div>
     <div class="static-content">
         <label>SDB pedon ID
-          <input name="sdb_peiid_ref" type="text">
+          <input name="sdb_peiid_ref" type="text" required>
         </label>
 
         <label>SDB horizon ID
-          <input name="sdb_hziid_ref" type="text">
+          <input name="sdb_hziid_ref" type="text" required>
         </label>
 
         <label>Lab sample ID
-          <input name="lab_smiid" type="text">
+          <input name="lab_smiid" type="text" required>
         </label>
 
         <label>SDB sample ID
-          <input name="sdb_smiid" type="text">
+          <input name="sdb_smiid" type="text" required>
         </label>
 
         <label>entry date
-          <input name="sm_entry_dts" type="dts">
+          <input name="sm_entry_dts" type="dts" required>
         </label>
     </div>
 </div>

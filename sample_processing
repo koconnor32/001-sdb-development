@@ -115,15 +115,15 @@ body {
 <!--Catagory: Sample Processing Identifying Informatiom-->
 
 <label>SDB sample ID
-  <input name="sdb_smiid_ref" type="text">
+  <input name="sdb_smiid_ref" type="text" required>
 </label>
 
 <label>SDB sample processing ID
-  <input name="sdb_smprociid" type="text">
+  <input name="sdb_smprociid" type="text" required>
 </label>
 
 <label>entry date
-  <input name="smpro_entry_dts" type="dts">
+  <input name="smpro_entry_dts" type="dts" required>
 </label>
 
 <!--Catagory: Sieving-->
