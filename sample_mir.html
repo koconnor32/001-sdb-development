@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Sample MIR Data Entry
+<title>Sample MIR Entry Form
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -75,7 +75,7 @@ body {
 <body>
 
 <form id="f" style="max-width:650px;margin:24px auto;display:grid;gap:10px">
-  <h1 style="text-align: center; font-size: 32px; margin-bottom: 15px;">SDB Horizon Entry Form</h1>
+  <h1 style="text-align: center; font-size: 32px; margin-bottom: 15px;">Sample MIR Entry Form</h1>
 
   <div id="statusMessage"></div>
 
@@ -169,7 +169,7 @@ body {
     </div>
 </div>
 
-!--This is the save button at the end of the form, needs work-->
+<!--This is the save button at the end of the form, needs work-->
  
   <button>Save</button>
   <pre id="out"></pre>
@@ -185,7 +185,7 @@ document.getElementById('f').addEventListener('submit', async (e)=>{
   fd.forEach((v,k)=> body[k]=v||null);
   
   try {
-    const r = await fetch(API + "/pedons", { 
+    const r = await fetch(API + "/projects", { 
       method:'POST', 
       headers:{'content-type':'application/json'}, 
       body: JSON.stringify(body) 
@@ -198,7 +198,7 @@ document.getElementById('f').addEventListener('submit', async (e)=>{
     try {
       const json = JSON.parse(responseText);
       if (json.ok) {
-        outEl.textContent = "✓ SUCCESS: Pedon saved! ID: " + json.sdb_peiid;
+        outEl.textContent = "✓ SUCCESS: Project saved! ID: " + json.sdb_projiid;
         outEl.style.color = "green";
       } else {
         outEl.textContent = "✗ ERROR: " + json.error;
